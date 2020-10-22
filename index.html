@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="Welcome">
+    Welcome, Mrs Townsend!
+  </div>
+  <div class="slogan">
+    <div class="dropdown">
+      <span>So I have been messing around with the main Web languages. It isn't too advanced but it is definitely a start! (hover over this message)</span>
+      <div class="dropdown-content">
+        <p>JavaScript</p>
+        <p>Html</p>
+        <p>CSS</p>
+      </div>
+    </div>
+  </div>
+    <div id="Title" class = "Title">
+      The DashBoard
+    </div>
+    &nbsp;
+    <h1></h1>
+    <div id="DashBoardA" class="DashBoardA">
+      <p class="Status" id="Status"> You aren't logged in.</p>
+      <h1></h1>
+      <div id="innerDBA" class="innerDBA">
+        <input id="LoginBox" class="LoginBox"
+        type="text"
+        value="Name">
+        <br>
+        <br>
+
+        <input id = "PassBox" class="PassBox"
+        type="text"
+        value="Passcode"
+        >
+    
+        <br>
+        <br>
+
+      <input id="LoginButton" class="LoginButton"
+      type="button"
+      value="Login">
+      </div>
+    </div>
+
+    <div id="MainDashboard" class="MainDashboard">
+
+      <div id="Table1" class="Table1">
+
+          Welcome!
+          <br>
+          Status: Online!
+          <br>
+        
+        <div id="SourceCode" class="SourceCode">
+        <h1 class="h1s">
+          This is the source code for this program!
+        </h1>
+        <br>
+          
+          <a class="link" href="https://github.com/JosephThomas1123/WebsiteStater">Click here!</a>
+        <br>
+      </div>
+
+      </div>
+      
+  
+    </div>
+
+    <script>
+document.getElementById("MainDashboard").style.visibility = "hidden";
+const Login =  document.getElementById("LoginButton");
+
+Login.onclick = function(){
+
+
+  const Name =  document.getElementById("LoginBox").value;
+  const Pass =  document.getElementById("PassBox").value;
+  const Status =  document.getElementById("Status").innerText;
+  
+
+  if(Name == "Townsend1" && Pass == "1"){
+    document.getElementById("Status").innerText = "Welcome!";
+    document.getElementById("Title").innerText = "The DashBoard(Logged In)";
+
+    document.getElementById("DashBoardA").style.height = 0;
+    document.getElementById("DashBoardA").style.visibility = "hidden";
+
+    document.getElementById("MainDashboard").style.visibility = "visible";
+
+
+  } else {
+    document.getElementById("Status").innerText = "Wrong Name or Passcode!";
+  }
+}
+
+
+    </script>
+</body>
+</html>
